@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>Розклад занять</title>
+</head>
+<style>
+   body {
+        background: url(fone.png) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        }
+   img  {
+        display: block;
+        margin: 0 auto;
+        }
+   table{
+         position: absolute;
+         left: 75px;
+         bottom: 125px; 
+         background-color: white;
+         border-collapse: collapse;
+        }
+   th,td{
+         border: 1px solid #ccc;
+         text-align: center;
+        }
+   form {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         width: 175px;
+         padding: 20px;
+         border: 2px solid #ccc;
+         background-color: blue;
+         color: white;
+        }
+  aside {
+          float: right; 
+          width: 250px; 
+          background-color: green ; 
+          color: yellow;
+          border: 2px solid #ccc; 
+          margin-top: 130px;
+          margin-right: 10px;
+        }
+   </style>
+<body>
+    <img src="iszzi.png" alt="Логотип" width="200">
+    <table>
+      <caption style="color: #424242"><font size="5">Розклад занять на тиждень</font></caption>
+      <tr>
+      <td></td>
+      <th>18.09 Понеділок</th>
+      <th>19.09 Вівторок</th>
+      <th>20.09 Середа</th>
+      <th>21.09 Четвер</th>
+      <th>22.09 П'ятниця</th>
+      <th>23.09 Субота</th>
+      <th>24.09 Неділя</th>
+    </tr>
+  <tr>
+    <td>8:30-9:15</td>
+    <td rowspan="2">Право<br>517 каб.</td>
+    <td rowspan="2">ФВ<br>парк</td>
+    <td rowspan="2">ТІМ<br>503 каб.</td>
+    <td rowspan="2">СР<br>503 каб.</td>
+    <td rowspan="2">ФВ<br>парк</td>
+    <td rowspan="2">ЗВП<br>107 каб.</td>
+    <td rowspan="8">Вихідний день</td>
+  </tr>
+  <tr>
+    <td>9:20-10:05</td>
+  </tr>
+    <tr>
+      <td>10:25-11:10</td>
+      <td rowspan="2">ЗВП<br>6 каб.</td>
+      <td rowspan="2">ТІК<br>парк</td>
+      <td rowspan="2">ТІМ<br>503 каб.</td>
+      <td rowspan="2">Право<br>101 каб.</td>
+      <td rowspan="2">ТС<br>410</td>
+      <td rowspan="2">ЗВП<br>107 каб.</td>
+
+    </tr>
+    <tr>
+      <td>11:15-12:00</td>
+    </tr>
+  <tr>
+    <td>12:20-13:05</td>
+    <td rowspan="2">Програмування<br>503 каб.</td>
+    <td rowspan="2">ТС<br>410 каб.</td>
+    <td rowspan="2">ІМ<br>413 каб.</td>
+    <td rowspan="2">ФВ<br>парк</td>
+    <td rowspan="2">СР<br>517 каб.</td>
+    <td rowspan="2">СР<br>107 каб.</td>
+  </tr>
+  <tr>
+    <td>13:10-13:55</td>
+  </tr>
+    <tr>
+      <td>16:10-16:55</td>
+      <td rowspan="2">СР<br>101 каб.</td>
+      <td rowspan="2">СР<br>101 каб.</td>
+      <td rowspan="2">СР<br>101 каб.</td>
+      <td rowspan="2">Програмування<br>101 каб.</td>
+      <td rowspan="2">СР<br>101 каб.</td>
+      <td rowspan="2"></td>
+    </tr>
+    <tr>
+      <td>17:00-17:45</td>
+    </tr>
+    </table>
+    <form method="post" target="_blank">
+        <label for="name"> Ім'я: </label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="surname"> Прізвище: </label>
+        <input type="text" id="surname" name="surname" required><br><br>
+        <label for="email"> Пошта: </label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password"> Пароль: </label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="repit_password"> Підтвердження пароля: </label>
+        <input type="password" id="repit_password" name="repit_password" required><br><br>
+        <input type="submit" value="Відправити">
+    </form>
+    <aside class="note"><font size="2"> 
+        <p><strong>Примітка:</strong></p>
+        <p>ФВ - Фізичне виховання-3;</p>
+        <p>ТІМ - Телекомунікаційні та інформаційні мережі;</p>
+        <p>СР - Самостійна робота;</p>
+        <p>ЗВП - Загально військова підготовка-1;</p>
+        <p>ТІК - Теорія інформації та кодування;</p>
+        <p>ТС - Теорія сигналів;</p>
+        <p>ІМ - Іноземна мова-3.</p>
+    </font></aside>
+</body>
+</html>
