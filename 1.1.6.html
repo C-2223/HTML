@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Розклад занять</title>
+    <link rel="shortcut icon" href="lapa.png" type="imege/x-icon">
 </head>
 <style>
    body {
@@ -41,7 +42,7 @@
           background-color: green ; 
           color: yellow;
           border: 2px solid #ccc; 
-          margin-top: 130px;
+          margin-top: 135px;
           margin-right: 10px;
         }
    </style>
@@ -110,7 +111,7 @@
       <td>17:00-17:45</td>
     </tr>
     </table>
-    <form method="post" target="_blank">
+    <form method="post" target="_blank" onsubmit="return validateForm();">
         <label for="name"> Ім'я: </label>
         <input type="text" id="name" name="name" required><br><br>
         <label for="surname"> Прізвище: </label>
@@ -133,5 +134,17 @@
         <p>ТС - Теорія сигналів;</p>
         <p>ІМ - Іноземна мова-3.</p>
     </font></aside>
+   <script>
+    // Функція для перевірки, чи співпадають паролі
+    function validateForm() {
+        var password = document.getElementById("password").value;
+        var repit_password = document.getElementById("repit_password").value;
+        if (password !== repit_password) {  
+            alert("Паролі не співпадають!"); 
+            return false; 
+        }
+        return true;
+    }
+</script>
 </body>
 </html>
