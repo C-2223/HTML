@@ -1,41 +1,111 @@
-/* Форматування шрифту */
-.font-formatting {
+body {
     font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light gray background */
 }
 
-/* Форматування тексту */
-.text-formatting {
-    color: #3498db; /* Синій колір */
+.header {
+    background: linear-gradient(to right, #3498db, #2c3e50); /* Gradient header background */
+    color: #ecf0f1; /* Light gray text for header */
+    padding: 1em;
     text-align: center;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #ecf0f1; /* Світлий сірий фон */
-    padding: 10px; /* Додавання внутрішнього відступу */
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Анімація при зміні кольору */
 }
 
-.text-formatting:hover {
-    color: orange; /* Червоний колір при наведенні */
-    background-color: purple; /* Світлий сірий фон при наведенні */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Внутрішні та зовнішні відступи */
-.spacing {
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: orange; /* Bright blue links */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #e74c3c; /* Light red on hover */
+}
+
+.content {
     padding: 20px;
-    margin: 10px;
+    background-color: #ecf0f1; /* Light gray content background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Рамки */
-.border {
-    border: 20px dotted #3498db; /* Синій колір */
-    border-radius: 10px;
-    background-color: #f1c40f; /* Жовтий фон для рамки */
-    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Анімація при зміні кольору рамки та трансформація */
+.content:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
 }
 
-.border:hover {
-    border-color: green; /* Червоний колір рамки при наведенні */
-    transform: rotate(3deg); /* Трансформація: обертання на 3 градусів при наведенні */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 10px dotted purple; /* Dotted border with the color #3498db */
+    padding: 20px; /* Padding inside the bordered area */
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: blue; /* Bright blue label text */
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #bdc3c7; /* Light border color */
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: red; /* Bright blue border on focus */
+}
+
+button {
+    background-color: #3498db; /* Bright blue button background */
+    color: yellow;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: green; /* Slightly darker blue on hover */
+}
+
+.table {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #bdc3c7; /* Light border color for table cells */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Bright blue header background */
+    color: #fff; /* White text for header */
 }
