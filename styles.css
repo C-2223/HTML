@@ -1,0 +1,41 @@
+/* Форматування шрифту */
+.font-formatting {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Форматування тексту */
+.text-formatting {
+    color: #3498db; /* Синій колір */
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #ecf0f1; /* Світлий сірий фон */
+    padding: 10px; /* Додавання внутрішнього відступу */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Анімація при зміні кольору */
+}
+
+.text-formatting:hover {
+    color: orange; /* Червоний колір при наведенні */
+    background-color: purple; /* Світлий сірий фон при наведенні */
+}
+
+/* Внутрішні та зовнішні відступи */
+.spacing {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Рамки */
+.border {
+    border: 20px dotted #3498db; /* Синій колір */
+    border-radius: 10px;
+    background-color: #f1c40f; /* Жовтий фон для рамки */
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Анімація при зміні кольору рамки та трансформація */
+}
+
+.border:hover {
+    border-color: green; /* Червоний колір рамки при наведенні */
+    transform: rotate(3deg); /* Трансформація: обертання на 3 градусів при наведенні */
+}
