@@ -1,0 +1,122 @@
+/* Спільні стилі для горизонтальної та вертикальної навігації */
+nav {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Стилі для горизонтальної навігації */
+.horizontal-nav {
+  background-color: #4CAF50;
+  overflow: hidden;
+  border-bottom: 2px solid #ddd;
+}
+
+.horizontal-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li {
+  float: left;
+  position: relative; /* Для позиціонування ефекту при наведенні */
+}
+
+.horizontal-nav li a {
+  border-right: 2px solid #bbb;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.horizontal-nav li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: yellow; /* Колір ефекту */
+  transition: width 0.3s ease; /* Плавне розширення */
+}
+
+.horizontal-nav li a:hover::before {
+  width: 100%;
+}
+
+.horizontal-nav li a:hover {
+  background-color: yellow;
+  color: blue;
+}
+
+/* Стилі для вертикальної навігації */
+.vertical-nav {
+  background-color: #4CAF50;
+  padding: 15px;
+  width: 150px;
+  border-right: 2px solid #ddd;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-nav li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+
+.vertical-nav li a {
+  border: 2px solid #bbb;
+  display: block;
+  color: #333;
+  padding: 8px 0;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.vertical-nav li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  transition: width 0.3s ease;
+}
+
+.vertical-nav li a:hover::before {
+  width: 100%;
+}
+
+.vertical-nav li a:hover {
+  background-color: yellow;
+  color: blue;
+}
+
+/* Стилі для іконок */
+.horizontal-nav li img,
+.vertical-nav li img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px; /* Додано відступ між текстом та іконкою */
+  border-radius: 3px;
+  border: 2px solid #ddd;
+}
+
+.vertical-nav li img {
+  width: 80px;
+  height: 20px;
+  margin-right: 5px; /* Додано відступ між текстом та іконкою */
+}
+
+.horizontal-nav li img {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px; /* Додано відступ між текстом та іконкою */
+}
