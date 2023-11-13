@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced DOM Manipulation</title>
+  <style>
+    /* Оновлені стилі для елементів */
+    .highlight {
+      background-color: #ffcc00; /* жовтий фон */
+      color: #333; /* чорний текст */
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    #myDiv {
+      font-size: 20px;
+      animation: colorBlink 1s infinite alternate;
+      background-color: #4CAF50; /* зелений фон */
+      color: #fff; /* білий текст */
+    }
+
+    p {
+      transition: font-size 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    /* Оновлений ефект для наведення на виділені елементи */
+    .highlight:hover {
+      background-color: #8bc34a; /* світло-зелений фон при наведенні */
+      color: #fff; /* білий текст при наведенні */
+    }
+
+    /* Ефекти */
+    @keyframes colorBlink {
+      from {
+        color: red;
+      }
+      to {
+        color: #fff; /* білий текст при анімації */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="myDiv" class="highlight">Це div елемент</div>
+  <p>Це параграф</p>
+  <ul>
+    <li>Елемент списку 1</li>
+    <li class="highlight">Елемент списку 2</li>
+    <li>Елемент списку 3</li>
+  </ul>
+  <a href="#" id="myLink" class="highlight">Це посилання</a>
+
+  <script>
+    var myDiv = document.getElementById('myDiv');
+    var myLink = document.getElementById('myLink');
+    var highlightedElements = document.getElementsByClassName('highlight');
+    var paragraphs = document.getElementsByTagName('p');
+
+    myDiv.style.fontSize = '20px';
+    myLink.innerHTML = 'Змінене посилання';
+
+    console.log('Батьківський елемент для myLink:', myLink.parentNode);
+    console.log('Дочірні елементи для myDiv:', myDiv.childNodes);
+
+    myLink.addEventListener('click', function() {
+      alert('Ви клікнули на посилання!');
+    });
+
+    for (var i = 0; i < highlightedElements.length; i++) {
+      highlightedElements[i].addEventListener('mouseover', function() {
+        this.style.color = 'red';
+      });
+
+      highlightedElements[i].addEventListener('mouseout', function() {
+        this.style.color = '#fff'; /* білий текст при знятті наведення */
+      });
+    }
+
+    // Додавання обробників подій для розширення тексту параграфу при наведенні
+    for (var j = 0; j < paragraphs.length; j++) {
+      paragraphs[j].addEventListener('mouseover', function() {
+        this.style.fontSize = '24px';
+      });
+
+      paragraphs[j].addEventListener('mouseout', function() {
+        this.style.fontSize = '';
+      });
+    }
+  </script>
+</body>
+</html>
